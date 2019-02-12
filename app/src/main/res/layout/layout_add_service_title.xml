@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <TextView
+        android:id="@+id/textView6"
+        style="@style/TxtCommonBlackNormal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.5"
+        android:padding="8dp"
+        android:text="项目"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView7"
+        style="@style/TxtCommonBlackNormal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:padding="8dp"
+        android:text="尺寸"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView8"
+        style="@style/TxtCommonBlackNormal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:padding="8dp"
+        android:text="底色"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView11"
+        style="@style/TxtCommonBlackNormal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:padding="8dp"
+        android:text="价格"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView9"
+        style="@style/TxtCommonBlackNormal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:padding="8dp"
+        android:text="状态"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView10"
+        style="@style/TxtCommonBlackNormal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:padding="8dp"
+        android:text="操作"
+        android:textStyle="bold" />
+
+</LinearLayout>

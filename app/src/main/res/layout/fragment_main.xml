@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_main">
+
+
+    <TextView
+        android:id="@+id/tv_setting"
+        style="@style/TxtCommonWhiteBig"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawablePadding="4dp"
+        android:drawableTop="@drawable/img_setting"
+        android:gravity="center_horizontal"
+        android:text="设置"
+        app:layout_constraintEnd_toEndOf="@+id/tv_appointment_list"
+        app:layout_constraintStart_toStartOf="@+id/tv_appointment_list"
+        app:layout_constraintTop_toTopOf="@+id/tv_slip_code" />
+
+    <TextView
+        android:id="@+id/tv_slip_code"
+        style="@style/TxtCommonWhiteBig"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawablePadding="4dp"
+        android:drawableTop="@drawable/img_slip_code"
+        android:gravity="center_horizontal"
+        android:text="转单码"
+        app:layout_constraintEnd_toEndOf="@+id/tv_work_shift"
+        app:layout_constraintStart_toStartOf="@+id/tv_work_shift"
+        app:layout_constraintTop_toTopOf="@+id/tv_shop" />
+
+    <TextView
+        android:id="@+id/tv_shop"
+        style="@style/TxtCommonWhiteBig"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:drawablePadding="4dp"
+        android:drawableTop="@drawable/img_shop"
+        android:gravity="center_horizontal"
+        android:text="商品列表"
+        app:layout_constraintEnd_toEndOf="@+id/tv_word_open"
+        app:layout_constraintHorizontal_bias="0.611"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="@+id/tv_word_open"
+        app:layout_constraintTop_toTopOf="@+id/guideline" />
+
+    <TextView
+        android:id="@+id/tv_appointment_list"
+        style="@style/TxtCommonWhiteBig"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawablePadding="4dp"
+        android:drawableTop="@drawable/img_appointment"
+        android:gravity="center_horizontal"
+        android:text="收银"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tv_work_shift"
+        app:layout_constraintTop_toTopOf="@+id/tv_work_shift" />
+
+    <TextView
+        android:id="@+id/tv_work_shift"
+        style="@style/TxtCommonWhiteBig"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawablePadding="4dp"
+        android:drawableTop="@drawable/img_shift_work"
+        android:gravity="center_horizontal"
+        android:text="交班"
+        app:layout_constraintEnd_toStartOf="@+id/tv_appointment_list"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tv_word_open"
+        app:layout_constraintTop_toTopOf="@+id/tv_word_open" />
+
+    <TextView
+        android:id="@+id/tv_word_open"
+        style="@style/TxtCommonWhiteBig"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:drawablePadding="4dp"
+        android:drawableTop="@drawable/img_open_work"
+        android:gravity="center_horizontal"
+        android:text="开班"
+        app:layout_constraintBottom_toTopOf="@+id/guideline"
+        app:layout_constraintEnd_toStartOf="@+id/tv_work_shift"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/img_head"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="64dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/img_staff_women"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:riv_border_color="@color/transparent"
+        app:riv_border_width="0dp"
+        app:riv_oval="true" />
+
+    <ImageView
+        android:id="@+id/img_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/logo_title" />
+
+    <TextView
+        android:id="@+id/img_exit"
+        style="@style/TxtCommonWhiteNormal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:layout_marginTop="16dp"
+        android:gravity="center_horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:drawablePadding="6dp"
+        android:drawableTop="@drawable/img_exit"
+        android:text="退出" />
+
+    <TextView
+        android:id="@+id/tv_welcome"
+        style="@style/TxtCommonWhiteHuge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="欢迎您，天真蓝员工"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/img_head"
+        app:layout_constraintStart_toStartOf="@+id/img_head"
+        app:layout_constraintTop_toBottomOf="@+id/img_head" />
+
+    <TextView
+        android:id="@+id/tv_work_order"
+        style="@style/TxtCommonWhiteSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:drawablePadding="6dp"
+        android:drawableStart="@drawable/img_date"
+        android:text="当前班次20181102"
+        android:visibility="gone"
+        android:paddingBottom="6dp"
+        android:paddingEnd="16dp"
+        android:paddingStart="16dp"
+        android:paddingTop="6dp"
+        android:background="@drawable/shape_circle_button_black"
+        app:layout_constraintEnd_toEndOf="@+id/tv_welcome"
+        app:layout_constraintStart_toStartOf="@+id/tv_welcome"
+        app:layout_constraintTop_toBottomOf="@+id/tv_welcome" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.56" />
+
+</android.support.constraint.ConstraintLayout>

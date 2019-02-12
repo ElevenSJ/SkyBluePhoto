@@ -1,0 +1,49 @@
+apply plugin: 'com.android.application'
+
+
+android {
+    compileSdkVersion rootProject.compileSdkVersion
+    buildToolsVersion rootProject.buildToolsVersion
+
+    defaultConfig {
+        applicationId "com.sj.skyblue"
+        minSdkVersion rootProject.minSdkVersion
+        targetSdkVersion rootProject.targetSdkVersion
+        versionCode 8
+        versionName "1.0.8"
+        // 设置MultiDex可用
+        multiDexEnabled true
+    }
+
+
+
+    android.applicationVariants.all { variant ->
+        variant.outputs.all {
+            def date = new Date().format("yyyy-MM-dd" , TimeZone.getTimeZone("GMT+08"))
+            if(variant.buildType.name.equals('debug')){
+                outputFileName = "SkyBlue_${date}_${versionName}.apk"
+            }
+            if(variant.buildType.name.equals('release')){
+                outputFileName = "SkyBlue_${date}_${versionName}.apk"
+            }
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation project(':module_lib')
+    implementation project(':fragmentation')
+    // EventBus
+    implementation project(':eventbus_activity_scope')
+
+    //butterknife
+    api 'com.jakewharton:butterknife:8.8.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+
+//    implementation 'com.sunmi:printerlibrary:1.0.4'
+    //bugly 异常上报
+    implementation 'com.tencent.bugly:crashreport:latest.release' //其中latest.release指代最新Bugly SDK版本号，也可以指定明确的版本号，例如2.1.9
+    implementation 'com.tencent.bugly:nativecrashreport:latest.release' //其中latest.release指代最新Bugly NDK版本号，也可以指定明确的版本号，例如3.0
+}
+

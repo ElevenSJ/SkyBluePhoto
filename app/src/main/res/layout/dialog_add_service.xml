@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    >
+
+    <TextView
+        android:id="@+id/tv_title"
+        style="@style/TxtCommonBlackNormal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="新增服务"
+        app:layout_constraintBottom_toBottomOf="@+id/img_close"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/img_close" />
+
+    <ImageView
+        android:id="@+id/img_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/btn_dialog" />
+
+    <View
+        android:id="@+id/line1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/divider_color"
+        app:layout_constraintTop_toBottomOf="@+id/img_close" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/ryl_layout"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/line1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView4"
+                style="@style/TxtCommonBlackBig"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="16dp"
+                android:text="选择服务" />
+
+            <com.jude.easyrecyclerview.EasyRecyclerView
+                android:id="@+id/ryl_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="8dp"
+                app:layout_empty="@layout/layout_view_empty"
+                app:layout_error="@layout/layout_load_error"
+                app:layout_progress="@layout/layout_load_progress"
+                app:scrollbarStyle="insideOverlay"
+                app:scrollbars="none">
+
+            </com.jude.easyrecyclerview.EasyRecyclerView>
+
+            <TextView
+                android:id="@+id/textView5"
+                style="@style/TxtCommonBlackBig"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="16dp"
+                android:text="选择商品" />
+
+            <com.jude.easyrecyclerview.EasyRecyclerView
+                android:id="@+id/ryl_view1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="8dp"
+                app:layout_empty="@layout/layout_view_empty"
+                app:layout_error="@layout/layout_load_error"
+                app:layout_progress="@layout/layout_load_progress"
+                app:scrollbarStyle="insideOverlay"
+                app:scrollbars="none">
+
+            </com.jude.easyrecyclerview.EasyRecyclerView>
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/divider_color"
+        app:layout_constraintTop_toBottomOf="@+id/ryl_layout" />
+
+    <Button
+        android:id="@+id/bt_sure"
+        style="@style/TxtCommonWhiteSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/shape_circle_button"
+        android:text="确定新增"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/line" />
+
+    <Button
+        android:id="@+id/bt_cancle"
+        style="@style/TxtCommonBlackSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/shape_circle_button_bg_gray"
+        android:text="取消"
+        app:layout_constraintBottom_toBottomOf="@+id/bt_sure"
+        app:layout_constraintEnd_toStartOf="@+id/bt_sure"
+        app:layout_constraintTop_toTopOf="@+id/bt_sure" />
+</android.support.constraint.ConstraintLayout>

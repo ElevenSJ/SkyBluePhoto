@@ -1,0 +1,1 @@
+include ':app',':module_lib', ':fragmentation_core', ':fragmentation', ':eventbus_activity_scope'

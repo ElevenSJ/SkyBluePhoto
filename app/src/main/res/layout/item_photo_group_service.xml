@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/item_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/blue_white_bg"
+    android:paddingBottom="16dp">
+
+
+    <TextView
+        android:id="@+id/tv_service_name"
+        android:textSize="18sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/item_photo_title_selector"
+        android:textColor="@color/main_textcolor_selector"
+        android:gravity="center"
+        android:paddingBottom="8dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="8dp"
+        android:text="服务名称"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/bt_ext"
+        style="@style/TxtCommonBlackHuge"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginTop="2dp"
+        android:background="@drawable/shape_circle_button_bg_gray"
+        android:drawablePadding="6dp"
+        android:drawableStart="@drawable/img_add"
+        android:gravity="center"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:text="加选"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_service_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_service_name" />
+
+    <include
+        android:id="@+id/layout_title"
+        layout="@layout/layout_group_service_title"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_service_name"/>
+
+
+    <com.jude.easyrecyclerview.EasyRecyclerView
+        android:id="@+id/ryl_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@+id/layout_title"
+        app:layout_constraintStart_toStartOf="@+id/layout_title"
+        app:layout_constraintTop_toBottomOf="@+id/layout_title"
+        app:layout_empty="@layout/layout_view_empty"
+        app:scrollbarStyle="insideOverlay"
+        app:scrollbars="none" />
+
+    <TextView
+        android:id="@+id/tv_total_price"
+        style="@style/TxtCommonRedNormal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/item_photo_price_bg"
+        android:padding="8dp"
+        android:text="小计：价格"
+        android:textStyle="bold"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="@+id/layout_title"
+        app:layout_constraintStart_toStartOf="@+id/layout_title"
+        app:layout_constraintTop_toBottomOf="@+id/ryl_view" />
+
+
+</android.support.constraint.ConstraintLayout>

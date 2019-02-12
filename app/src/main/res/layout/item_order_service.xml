@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/item_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/blue_white_bg"
+    android:orientation="vertical"
+    >
+
+
+    <com.jude.easyrecyclerview.EasyRecyclerView
+        android:id="@+id/ryl_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_empty="@layout/layout_view_empty"
+        app:scrollbarStyle="insideOverlay"
+        app:scrollbars="none" />
+
+</LinearLayout>

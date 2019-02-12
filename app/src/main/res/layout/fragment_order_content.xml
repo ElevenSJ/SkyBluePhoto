@@ -1,0 +1,484 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/layout_main"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="4"
+        android:fillViewport="true"
+        android:padding="10dp">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/tv_orderId"
+                style="@style/TxtCommonBlackBig"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:drawablePadding="6dp"
+                android:drawableStart="@drawable/img_order_appointment"
+                android:gravity="left|center_vertical"
+                android:text="订单编号"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_order_status"
+                style="@style/TxtCommonWhiteNormal"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:background="@drawable/shape_circle_button_green_6"
+                android:gravity="center"
+                android:paddingEnd="12dp"
+                android:paddingStart="12dp"
+                android:text="订单状态"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_orderId"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tv_orderId" />
+
+            <TextView
+                android:id="@+id/tv_bind"
+                style="@style/TxtCommonWhiteNormal"
+                android:layout_width="wrap_content"
+                android:layout_height="24dp"
+                android:layout_marginStart="24dp"
+                android:background="@drawable/shape_circle_button_orange"
+                android:gravity="center"
+                android:paddingEnd="12dp"
+                android:paddingStart="12dp"
+                android:text="绑定收银员"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_employee_name"
+                app:layout_constraintStart_toEndOf="@+id/tv_employee_name"
+                app:layout_constraintTop_toTopOf="@+id/tv_employee_name" />
+
+            <TextView
+                android:id="@+id/tv_add_combo"
+                style="@style/TxtCommonWhiteNormal"
+                android:layout_width="wrap_content"
+                android:layout_height="24dp"
+                android:background="@drawable/shape_circle_button_blue"
+                android:gravity="center"
+                android:paddingEnd="12dp"
+                android:paddingStart="12dp"
+                android:text="选择套餐"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_employee_name"
+                app:layout_constraintEnd_toEndOf="@+id/tv_order_status"
+                app:layout_constraintTop_toTopOf="@+id/tv_employee_name" />
+
+            <TextView
+                android:id="@+id/tv_employee_name"
+                style="@style/TxtCommonBlackNormal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:gravity="left|center_vertical"
+                android:text="收银员："
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_orderId" />
+
+            <TextView
+                android:id="@+id/tv_appointment_time"
+                style="@style/TxtCommonGrayNormal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="left|center_vertical"
+                android:text="预约时间"
+                android:textStyle="bold"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_bind" />
+
+            <TextView
+                android:id="@+id/tv_user_info"
+                style="@style/TxtCommonGraySmall"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:drawablePadding="6dp"
+                android:drawableStart="@drawable/img_user"
+                android:gravity="left|center_vertical"
+                android:text="称呼"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_appointment_time" />
+
+            <TextView
+                android:id="@+id/tv_pre_pay"
+                style="@style/TxtCommonGraySmall"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:drawablePadding="6dp"
+                android:drawableStart="@drawable/img_price"
+                android:gravity="left|center_vertical"
+                android:text="预付定金"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_user_info" />
+
+            <TextView
+                android:id="@+id/tv_address"
+                style="@style/TxtCommonGraySmall"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:drawablePadding="6dp"
+                android:drawableStart="@drawable/img_address"
+                android:gravity="left|center_vertical"
+                android:text="物流地址"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_pre_pay" />
+
+            <TextView
+                android:id="@+id/tv_combo"
+                style="@style/TxtCommonRedBig"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:drawablePadding="6dp"
+                android:gravity="left|center_vertical"
+                android:text="套餐信息"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_address" />
+
+
+            <com.jude.easyrecyclerview.EasyRecyclerView
+                android:id="@+id/ryl_view"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_combo"
+                app:layout_empty="@layout/layout_view_empty"
+                app:scrollbarStyle="insideOverlay"
+                app:scrollbars="none" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/blue_white_bg"
+                android:gravity="center"
+                android:padding="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ryl_view">
+
+                <TextView
+                    android:id="@+id/tv_add_service"
+                    style="@style/TxtCommonBlackBig"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="6dp"
+                    android:drawableTop="@drawable/img_add_service"
+                    android:gravity="center"
+                    android:text="添加服务"
+                    android:textColor="@color/color_light_blue" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_total_price"
+                style="@style/TxtCommonBlackBig"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:padding="4dp"
+                android:text="总额：¥0"
+                app:layout_constraintStart_toStartOf="@+id/linearLayout"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+            <TextView
+                android:id="@+id/tv_paid_price"
+                style="@style/TxtCommonGreenNormal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="4dp"
+                android:text="已付：¥0"
+                app:layout_constraintStart_toStartOf="@+id/linearLayout"
+                app:layout_constraintTop_toBottomOf="@+id/tv_total_price" />
+
+            <TextView
+                android:id="@+id/tv_combo_price"
+                style="@style/TxtCommonBlueNormal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="4dp"
+                android:visibility="visible"
+                android:text="优惠：¥0"
+                app:layout_constraintStart_toStartOf="@+id/linearLayout"
+                app:layout_constraintTop_toBottomOf="@+id/tv_paid_price" />
+
+            <TextView
+                android:id="@+id/tv_discount_price"
+                style="@style/TxtCommonBlueNormal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="4dp"
+                android:text="折扣：¥0"
+                app:layout_constraintStart_toStartOf="@+id/linearLayout"
+                app:layout_constraintTop_toBottomOf="@+id/tv_combo_price" />
+
+
+            <TextView
+                android:id="@+id/bt_add_discount"
+                style="@style/TxtCommonBlackSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginStart="8dp"
+                android:background="@drawable/shape_circle_button_bg_gray"
+                android:gravity="center"
+                android:paddingEnd="8dp"
+                android:paddingStart="8dp"
+                android:text="添加折扣"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_discount_price"
+                app:layout_constraintStart_toEndOf="@+id/tv_discount_price"
+                app:layout_constraintTop_toTopOf="@+id/tv_discount_price" />
+
+            <View
+                android:id="@+id/line1"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="8dp"
+                android:background="@color/divider_color"
+                app:layout_constraintTop_toBottomOf="@+id/bt_add_discount" />
+
+            <TextView
+                android:id="@+id/tv_need_pay"
+                style="@style/TxtCommonRedBig"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="应收：¥0"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/line1" />
+
+            <TextView
+                android:id="@+id/textView18"
+                style="@style/TxtCommonBlackSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="收款方式："
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_need_pay" />
+
+            <RadioGroup
+                android:id="@+id/radio_group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView18">
+
+                <RadioButton
+                    android:id="@+id/rt_cash"
+                    style="@style/TxtCommonBlackSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/radiobutton_background"
+                    android:button="@null"
+                    android:drawableLeft="@drawable/img_cashe"
+                    android:drawablePadding="6dp"
+                    android:gravity="center"
+                    android:padding="6dp"
+                    android:tag="0"
+                    android:text="现金"
+                    android:visibility="gone"
+                    android:textColor="@color/text_color_white_black_selector" />
+
+                <RadioButton
+                    android:id="@+id/rt_card"
+                    style="@style/TxtCommonBlackSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:background="@drawable/radiobutton_background"
+                    android:button="@null"
+                    android:drawableLeft="@drawable/img_card"
+                    android:drawablePadding="6dp"
+                    android:gravity="center"
+                    android:padding="6dp"
+                    android:tag="1"
+                    android:visibility="gone"
+                    android:text="银联卡"
+                    android:textColor="@color/text_color_white_black_selector" />
+
+                <RadioButton
+                    android:id="@+id/rt_ailipay"
+                    style="@style/TxtCommonBlackSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:background="@drawable/radiobutton_background"
+                    android:button="@null"
+                    android:drawableLeft="@drawable/img_shouqianba"
+                    android:drawablePadding="6dp"
+                    android:gravity="center"
+                    android:padding="6dp"
+                    android:tag="2"
+                    android:visibility="gone"
+                    android:text="支付宝"
+                    android:textColor="@color/text_color_white_black_selector" />
+                <RadioButton
+                    android:id="@+id/rt_wechat"
+                    style="@style/TxtCommonBlackSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:background="@drawable/radiobutton_background"
+                    android:button="@null"
+                    android:drawableLeft="@drawable/img_shouqianba"
+                    android:drawablePadding="6dp"
+                    android:gravity="center"
+                    android:padding="6dp"
+                    android:visibility="gone"
+                    android:tag="3"
+                    android:text="微信"
+                    android:textColor="@color/text_color_white_black_selector" />
+            </RadioGroup>
+
+
+            <TextView
+                android:id="@+id/bt_reback_money"
+                style="@style/TxtCommonBlackSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:background="@drawable/shape_circle_button_bg_gray"
+                android:drawablePadding="6dp"
+                android:drawableStart="@drawable/img_pay_back"
+                android:gravity="center"
+                android:padding="6dp"
+                android:text="退单退款"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="@+id/radio_group"
+                app:layout_constraintStart_toEndOf="@+id/radio_group"
+                app:layout_constraintTop_toTopOf="@+id/radio_group" />
+
+            <Button
+                android:id="@+id/bt_pay"
+                style="@style/TxtCommonWhiteBig"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/shape_circle_button"
+                android:text="立即支付"
+                app:layout_constraintEnd_toStartOf="@+id/bt_print_order"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/bt_reback_money" />
+
+            <Button
+                android:id="@+id/bt_print_order"
+                style="@style/TxtCommonBlackBig"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:background="@drawable/shape_circle_button_bg_gray"
+                android:paddingEnd="24dp"
+                android:paddingStart="24dp"
+                android:text="打印订单"
+                app:layout_constraintBottom_toBottomOf="@+id/bt_pay"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/bt_pay" />
+
+            <TextView
+                android:id="@+id/tv_remark"
+                style="@style/TxtCommonBlackNormal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:padding="4dp"
+                android:text="备注信息："
+                app:layout_constraintStart_toEndOf="@+id/bt_add_discount"
+                app:layout_constraintTop_toTopOf="@+id/tv_total_price" />
+
+            <EditText
+                android:id="@+id/et_remark"
+                style="@style/TxtCommonBlackNormal"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/blue_white_bg"
+                android:ems="10"
+                android:gravity="top|left"
+                android:hint="请输入备注信息"
+                android:padding="6dp"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_discount_price"
+                app:layout_constraintEnd_toEndOf="@+id/linearLayout"
+                app:layout_constraintStart_toStartOf="@+id/tv_remark"
+                app:layout_constraintTop_toBottomOf="@+id/tv_remark" />
+
+        </android.support.constraint.ConstraintLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="@color/divider_color"
+        android:visibility="gone" />
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1.2"
+        android:padding="10dp"
+        android:visibility="gone">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/img_head"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/img_staff_women"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:riv_border_color="@color/transparent"
+            app:riv_border_width="0dp"
+            app:riv_oval="true" />
+
+        <TextView
+            android:id="@+id/tv_vip_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="会员信息"
+            app:layout_constraintStart_toEndOf="@+id/img_head"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_vip_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toEndOf="@+id/img_head"
+            app:layout_constraintTop_toBottomOf="@+id/tv_vip_name" />
+
+    </android.support.constraint.ConstraintLayout>
+</LinearLayout>

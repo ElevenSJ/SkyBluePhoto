@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_nav_header"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/tv_add_order"
+        style="@style/TxtCommonWhiteHuge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/shape_circle_button_green"
+        android:paddingBottom="8dp"
+        android:paddingEnd="24sp"
+        android:paddingStart="24dp"
+        android:paddingTop="8dp"
+        android:text="新建订单" />
+
+</LinearLayout>

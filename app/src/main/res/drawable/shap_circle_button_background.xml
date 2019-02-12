@@ -1,0 +1,5 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/shape_circle_button" />
+    <item android:drawable="@drawable/shape_circle_button_bg_gray" android:state_enabled="false" />
+    <item android:drawable="@drawable/shape_circle_button" android:state_enabled="true" />
+</selector>

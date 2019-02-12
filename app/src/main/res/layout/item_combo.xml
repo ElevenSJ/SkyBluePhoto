@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/bg_gray"
+    android:gravity="center"
+    android:padding="10dp">
+
+    <TextView
+        android:id="@+id/tv_name"
+        style="@style/TxtCommonBlackBig"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_above="@+id/tv_price"
+        android:layout_alignParentTop="true"
+        android:gravity="center"
+        android:paddingBottom="20dp"
+        android:paddingTop="20dp"
+        android:text="商品名称" />
+
+    <TextView
+        android:id="@+id/tv_price"
+        style="@style/TxtCommonRedBig"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:text="优惠价格"
+        android:visibility="visible"/>
+</LinearLayout>

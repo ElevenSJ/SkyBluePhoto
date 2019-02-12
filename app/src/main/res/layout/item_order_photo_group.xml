@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:background="@color/bg_gray"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/tv_name"
+        style="@style/TxtCommonBlackNormal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.5"
+        android:padding="8dp"
+        android:text="尺寸"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.2"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="8dp">
+
+        <com.sj.module_lib.widgets.AmountView
+            android:id="@+id/tv_people_count"
+            style="@style/TxtCommonBlackNormal"
+            android:layout_width="wrap_content"
+            android:layout_height="26dp"
+            android:gravity="center_vertical"
+            app:btnTextSize="14sp"
+            app:btnWidth="26dp"
+            android:visibility="gone"
+            app:tvWidth="34dp" />
+        <TextView
+            android:id="@+id/tv_people_num"
+            style="@style/TxtCommonBlackNormal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="8dp"
+            android:textStyle="bold"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.2"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="8dp">
+
+        <com.sj.module_lib.widgets.AmountView
+            android:id="@+id/tv_count"
+            style="@style/TxtCommonBlackNormal"
+            android:layout_width="wrap_content"
+            android:layout_height="26dp"
+            android:gravity="center_vertical"
+            android:visibility="gone"
+            app:btnTextSize="14sp"
+            app:btnWidth="26dp"
+            app:tvWidth="34dp" />
+
+        <TextView
+            android:id="@+id/tv_num"
+            style="@style/TxtCommonBlackNormal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="8dp"
+            android:textStyle="bold"
+            android:visibility="gone" />
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/tv_price"
+        style="@style/TxtCommonBlackNormal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:padding="8dp"
+        android:text="单价"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_total_price"
+        style="@style/TxtCommonBlackNormal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:padding="8dp"
+        android:text="金额"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_status"
+        style="@style/TxtCommonBlackNormal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:padding="8dp"
+        android:text="状态"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+        <TextView
+            android:id="@+id/tv_do"
+            style="@style/TxtCommonWhiteSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_circle_button_red"
+            android:paddingBottom="6dp"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:paddingTop="6dp"
+            android:text="退款"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

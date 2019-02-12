@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/item_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="16dp">
+
+
+    <TextView
+        android:id="@+id/tv_service_name"
+        style="@style/TxtCommonWhiteHuge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/item_photo_title_selector"
+        android:gravity="center"
+        android:paddingBottom="8dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="8dp"
+        android:text="服务名称"
+        android:textColor="@drawable/item_photo_title_selector"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/bt_ext"
+        style="@style/TxtCommonBlackHuge"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginTop="2dp"
+        android:background="@drawable/shape_circle_button_bg_gray"
+        android:drawablePadding="6dp"
+        android:drawableStart="@drawable/img_add"
+        android:gravity="center"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:text="加选"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_service_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_service_name" />
+
+    <ImageView
+        android:id="@+id/img_pic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="8dp"
+        android:scaleType="fitXY"
+        android:maxHeight="180dp"
+        android:maxWidth="150dp"
+        android:adjustViewBounds="true"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_service_name"
+        android:src="@drawable/img_staff_man" />
+
+    <LinearLayout
+        android:id="@+id/layout_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_service_name">
+
+        <TextView
+            android:id="@+id/textView6"
+            style="@style/TxtCommonBlackNormal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:padding="8dp"
+            android:text="尺寸"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView7"
+            style="@style/TxtCommonBlackNormal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.5"
+            android:padding="8dp"
+            android:text="底色"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView8"
+            style="@style/TxtCommonBlackNormal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="8dp"
+            android:text="价格"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView9"
+            style="@style/TxtCommonBlackNormal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="8dp"
+            android:text="状态"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView10"
+            style="@style/TxtCommonBlackNormal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="8dp"
+            android:text="操作"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/item_order_photo_add"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@+id/layout_title"
+        app:layout_constraintStart_toStartOf="@+id/layout_title"
+        app:layout_constraintTop_toBottomOf="@+id/layout_title" />
+
+    <TextView
+        android:id="@+id/tv_base_photo_price"
+        style="@style/TxtCommonRedNormal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/item_photo_price_bg"
+        android:padding="8dp"
+        android:text="小计：价格"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/layout_title"
+        app:layout_constraintStart_toStartOf="@+id/layout_title"
+        app:layout_constraintTop_toBottomOf="@+id/include" />
+
+    <LinearLayout
+        android:id="@+id/layout_add"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="@+id/layout_title"
+        app:layout_constraintStart_toStartOf="@+id/layout_title"
+        app:layout_constraintTop_toBottomOf="@+id/tv_base_photo_price">
+
+        <TextView
+            android:id="@+id/bt_add1"
+            style="@style/TxtCommonBlackSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/shape_circle_button_bg_gray"
+            android:drawablePadding="6dp"
+            android:drawableStart="@drawable/img_add"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="加印非排版"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/bt_add2"
+            style="@style/TxtCommonBlackSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/shape_circle_button_bg_gray"
+            android:drawableStart="@drawable/img_add"
+            android:padding="8dp"
+            android:text="加印非排版"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/bt_add3"
+            style="@style/TxtCommonBlackSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/shape_circle_button_bg_gray"
+            android:drawableStart="@drawable/img_add"
+            android:padding="8dp"
+            android:text="加印非排版"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_add_print"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="@+id/layout_title"
+        app:layout_constraintStart_toStartOf="@+id/layout_title"
+        app:layout_constraintTop_toBottomOf="@+id/layout_add">
+
+        <LinearLayout
+            android:id="@+id/layout_add_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="8dp">
+
+            <TextView
+                android:id="@+id/textView11"
+                style="@style/TxtCommonBlackNormal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:padding="8dp"
+                android:text="尺寸"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView12"
+                style="@style/TxtCommonBlackNormal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.5"
+                android:padding="8dp"
+                android:text="底色"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView13"
+                style="@style/TxtCommonBlackNormal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="8dp"
+                android:text="价格"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView14"
+                style="@style/TxtCommonBlackNormal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="8dp"
+                android:text="状态"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView15"
+                style="@style/TxtCommonBlackNormal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingEnd="8dp"
+                android:paddingStart="8dp"
+                android:text="操作"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <com.jude.easyrecyclerview.EasyRecyclerView
+            android:id="@+id/ryl_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_empty="@layout/layout_view_empty"
+            app:scrollbarStyle="insideOverlay"
+            app:scrollbars="none" />
+
+        <TextView
+            android:id="@+id/tv_add_print_total_price"
+            style="@style/TxtCommonRedNormal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/item_photo_price_bg"
+            android:padding="8dp"
+            android:text="小计：价格"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+
+</android.support.constraint.ConstraintLayout>
